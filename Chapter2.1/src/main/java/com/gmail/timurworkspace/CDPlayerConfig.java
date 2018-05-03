@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@ComponentScan("com.gmail.timurworkspace") // Will be scan that package and any subpackages underneath it,
+@ComponentScan(basePackages = "com.gmail.timurworkspace") // Will be scan that package and any subpackages underneath it,
 // looking for classes that are annotated with @Component. It should find the
 // Compact-Disc class and automatically create a bean for it in Spring.
 
