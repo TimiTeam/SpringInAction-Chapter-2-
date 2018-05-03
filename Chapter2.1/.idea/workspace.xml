@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6186d710-eb10-443c-a15d-64bdd5fea084" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gmail/timurworkspace/CDPlayerConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/gmail/timurworkspace/CDPlayerConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DiscoverableBeans.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -544,12 +545,12 @@
       <created>1525341784602</created>
       <option name="number" value="Default" />
       <updated>1525341784602</updated>
-      <workItem from="1525341787300" duration="3496000" />
+      <workItem from="1525341787300" duration="3959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3496000" />
+    <option name="totallyTimeSpent" value="3959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="916" extended-state="0" />
