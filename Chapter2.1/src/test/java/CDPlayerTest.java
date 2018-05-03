@@ -1,6 +1,8 @@
 
+import com.gmail.timurworkspace.CDPlayer;
 import com.gmail.timurworkspace.CDPlayerConfig;
 import com.gmail.timurworkspace.CompactDisc;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +16,23 @@ import static org.junit.Assert.assertNotNull;
 
 public class CDPlayerTest {
 
+    private static final Logger logger = Logger.getLogger(CDPlayerTest.class);
+
     @Autowired
     private CompactDisc disc;
 
+    @Autowired
+    private CDPlayer player;
+
     @Test
-    public void cdShouldMotBeNull(){
+    public void cdShouldBeNotNull(){
+        logger.info("Check disc");
         assertNotNull(disc);
+    }
+
+    @Test
+    public void cdPlayerShouldBeNotNull(){
+        logger.info("Check CDPlayer");
+        assertNotNull(player);
     }
 }
