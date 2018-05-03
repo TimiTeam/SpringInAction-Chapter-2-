@@ -8,6 +8,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 
@@ -17,6 +19,7 @@ import static org.junit.Assert.assertNotNull;
 public class CDPlayerTest {
 
     private static final Logger logger = Logger.getLogger(CDPlayerTest.class);
+
 
     @Autowired
     private CompactDisc disc;
@@ -34,5 +37,15 @@ public class CDPlayerTest {
     public void cdPlayerShouldBeNotNull(){
         logger.info("Check CDPlayer");
         assertNotNull(player);
+    }
+
+
+    @Test
+    public void testPlay(){
+        player.play();
+        logger.info(player.getCorrectSong());
+        assertEquals(
+                "Playing The Beatles - Sgt. Pepper's Lonely Hearts Club Band",
+                player.getCorrectSong());
     }
 }

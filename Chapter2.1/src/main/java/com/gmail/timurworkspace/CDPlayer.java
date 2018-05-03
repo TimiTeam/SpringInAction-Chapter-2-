@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CDPlayer {
     private CompactDisc cd;
+    private String correctSong;
 
     @Autowired
     public CDPlayer(CompactDisc cd) {
@@ -20,12 +21,16 @@ public class CDPlayer {
         return cd;
     }
 
+    public String getCorrectSong() {
+        return correctSong;
+    }
+
     @Autowired
     public void setCd(CompactDisc cd) {
         this.cd = cd;
     }
 
     public void play(){
-        cd.play();
+        correctSong = cd.play();
     }
 }
