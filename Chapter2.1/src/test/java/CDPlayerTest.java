@@ -45,7 +45,7 @@ public class CDPlayerTest {
         player.play();
         logger.info(player.getCorrectSong());
         assertEquals(
-                "Playing The Beatles - Sgt. Pepper's Lonely Hearts Club Band",
+                disc.play(),
                 player.getCorrectSong());
     }
 }

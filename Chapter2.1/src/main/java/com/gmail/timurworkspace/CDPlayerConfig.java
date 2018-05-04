@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Configuration // annotation identifies this as a configuration class,
@@ -14,8 +16,20 @@ import org.springframework.context.annotation.Configuration;
 // It should find the Compact-Disc class and automatically create a bean for it in Spring.
 public class CDPlayerConfig {
 
-    @Bean
+    @Bean() //this method will return an object that should be registered as a bean in the
+    // Spring application context
     public CompactDisc sgtPeppers(){
-        return new SgtPeppers();
+        List<CompactDisc> discs = new ArrayList<CompactDisc>(3);
+        discs.add(new SgtPeppers());
+        discs.add(new ISawHer());
+        discs.add(new IveJustSeen());
+        int choice = (int)(Math.random()*3);
+        return discs.get(choice);
     }
+
+    @Bean
+    public CDPlayer cdPlayer(){
+        return new CDPlayer(sgtPeppers());
+    }
+
 }
