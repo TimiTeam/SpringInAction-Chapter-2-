@@ -1,8 +1,6 @@
 package com.gmail.timurworkspace;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +27,11 @@ public class CDPlayerConfig {
 
     @Bean
     public CDPlayer cdPlayer(){
+        return new CDPlayer(sgtPeppers());
+    }
+    @Bean
+    @Primary //To help spring understand which component to create
+    public CDPlayer anotherCdPlayer(){
         return new CDPlayer(sgtPeppers());
     }
 
